@@ -5,7 +5,6 @@ before:
   hooks:
     # Remove unused packaged from the build process
     - go mod tidy
-    - go generate
 
 builds:
   - main: ./main.go
@@ -88,7 +87,7 @@ nfpms:
 snapcrafts:
   - name: pttr
     publish: true
-    summary: A cross-platform terminal UI application for viewing and managing open ports - process on your system.
+    summary: port and process terminator manage ports - process on your system.
     description: |
       pttr is command line software that allows you to quickly run various transformation operations on the string.
     grade: stable
@@ -170,20 +169,20 @@ release:
     ## Quick Download Links - {{ .Tag }}
 
     **MacOS**
-    [Binary](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Darwin_all.tar.gz) ( Multi-Architecture )
+    [Binary](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Darwin_all.tar.gz) ( Multi-Architecture )
 
     **Linux (Binaries)**
-    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Linux_x86_64.tar.gz) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Linux_arm64.tar.gz) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Linux_i386.tar.gz)
+    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Linux_x86_64.tar.gz) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Linux_arm64.tar.gz) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Linux_i386.tar.gz)
 
     **Windows (Exe)**
-    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Windows_x86_64.zip) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Windows_arm64.zip) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_Windows_i386.zip)
+    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Windows_x86_64.zip) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Windows_arm64.zip) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_Windows_i386.zip)
 
     **Packages**
     * **Debian / Ubuntu (.deb):**
-    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_amd64.deb) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_arm64.deb) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_386.deb)
+    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_amd64.deb) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_arm64.deb) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_386.deb)
 
     * **Red Hat / CentOS / Fedora (.rpm):**
-    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_amd64.rpm) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_arm64.rpm) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_386.rpm)
+    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_amd64.rpm) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_arm64.rpm) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_386.rpm)
 
     * **Arch Linux (.pkg.tar.zst):**
-    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_amd64.pkg.tar.zst) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_arm64.pkg.tar.zst) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/kubewall_{{ replace .Tag "v" "" }}_linux_386.pkg.tar.zst)
+    [amd64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_amd64.pkg.tar.zst) | [arm64](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_arm64.pkg.tar.zst) | [i386](https://github.com/abhimanyu003/pttr/releases/download/{{ .Tag }}/pttr_{{ replace .Tag "v" "" }}_linux_386.pkg.tar.zst)

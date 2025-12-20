@@ -2,7 +2,7 @@
 
 # pttr
 
-A cross-platform terminal UI application for viewing and managing open ports - process on your system.
+**pttr: port and process terminator** is cross-platform terminal UI application for viewing and managing open ports - process on your system.
 
 ## Features
 
@@ -18,19 +18,6 @@ A cross-platform terminal UI application for viewing and managing open ports - p
 # :movie_camera: Demo
 
 ![sttr demo](./media/pttr.gif)
-
-### Enhanced Process View
-- **Smart Process Names**: Shows user-friendly names (e.g., "Google Chrome" instead of "chrome")
-- **Fast Process Icons**: Optimized text-based icons ([Web], [Dev], [DB], [Sys], etc.)
-- **Multiple Sort Modes**: Sort by CPU usage (default), memory usage, name, or PID (works in both flat and tree view)
-- **Enhanced Process Tree**: Proper tree structure with ├── and └── symbols, sorted at each level
-- **Visual Resource Usage**: CPU and memory bars with color-coded indicators (░▒▓█)
-- **High Usage Alerts**: 🔥 for high CPU, 💾 for high memory usage
-- **Parent Process Info**: Shows parent PID for process relationships
-- **Smart Filtering**: Filter/search works correctly without interfering with hotkeys
-- **High Performance**: Optimized for fast loading and responsive UI
-- **Flexible Startup**: Start with either ports or processes view using command line flags
-- **Permission Management**: Intelligent permission checking with sudo suggestions
 
 # :battery: Installation
 
@@ -95,6 +82,18 @@ go install github.com/abhimanyu003/pttr@latest
 Download the pre-compiled binaries from the [Release!](https://github.com/abhimanyu003/pttr/releases) page and copy them
 to the desired location.
 
+## Power Features
+- **Smart Process Names**: Shows user-friendly names (e.g., "Google Chrome" instead of "chrome")
+- **Fast Process Icons**: Optimized text-based icons ([Web], [Dev], [DB], [Sys], etc.)
+- **Multiple Sort Modes**: Sort by CPU usage (default), memory usage, name, or PID (works in both flat and tree view)
+- **Enhanced Process Tree**: Proper tree structure with ├── and └── symbols, sorted at each level
+- **Visual Resource Usage**: CPU and memory bars with color-coded indicators (░▒▓█)
+- **High Usage Alerts**: 🔥 for high CPU, 💾 for high memory usage
+- **Parent Process Info**: Shows parent PID for process relationships
+- **Smart Filtering**: Filter/search works correctly without interfering with hotkeys
+- **High Performance**: Optimized for fast loading and responsive UI
+- **Flexible Startup**: Start with either ports or processes view using command line flags
+- **Permission Management**: Intelligent permission checking with sudo suggestions
 
 ### Fallback Mechanisms
 The application includes comprehensive fallback mechanisms:
@@ -115,6 +114,12 @@ The application includes comprehensive fallback mechanisms:
 sudo pttr
 ```
 
+## Similar tools
+
+Other similar tools from which pttr draws inspiration
+
+* https://github.com/productdevbook/port-killer ( macOS only )
+* https://github.com/treadiehq/port-kill ( macOS only )
 
 # Contribution
 
