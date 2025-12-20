@@ -38,12 +38,6 @@ If you are on macOS and using Homebrew, you can install `pttr` with the followin
 brew install abhimanyu003/tap/pttr
 ```
 
-#### Snap
-
-```shell
-sudo snap install pttr
-```
-
 #### Arch Linux
 
 ```shell
