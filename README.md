@@ -35,7 +35,7 @@ curl -sfL https://raw.githubusercontent.com/abhimanyu003/pttr/main/install.sh | 
 If you are on macOS and using Homebrew, you can install `pttr` with the following:
 
 ```shell
-brew install abhimanyu003/tap/probe
+brew install abhimanyu003/tap/pttr
 ```
 
 #### Snap
