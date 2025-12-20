@@ -98,7 +98,17 @@ snapcrafts:
       - stable
     apps:
       pttr:
-        plugs: ["home", "network"]
+        command: pttr
+        plugs:
+          - home
+          - network
+          - network-bind
+          - network-observe
+          - system-observe
+          - process-control
+          - hardware-observe
+          - mount-observe
+          - network-control
 
 aurs:
   - name: pttr-bin
