@@ -171,10 +171,10 @@ func getBetterProcessName(process, command string) string {
 
 	// macOS .app detection from command
 	if strings.Contains(command, ".app") {
-		parts := strings.Split(command, "/")
-		for _, part := range parts {
-			if strings.HasSuffix(part, ".app") {
-				return strings.TrimSuffix(part, ".app")
+		parts := strings.SplitSeq(command, "/")
+		for part := range parts {
+			if before, ok := strings.CutSuffix(part, ".app"); ok {
+				return before
 			}
 		}
 	}

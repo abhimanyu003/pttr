@@ -87,8 +87,8 @@ func getWindowsProcessName(pid string) string {
 	if result == "" {
 		return "unknown"
 	}
-	lines := strings.Split(result, "\n")
-	for _, line := range lines {
+	lines := strings.SplitSeq(result, "\n")
+	for line := range lines {
 		if strings.Contains(line, ",") {
 			parts := strings.Split(line, ",")
 			if len(parts) > 0 {

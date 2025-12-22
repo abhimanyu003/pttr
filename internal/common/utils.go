@@ -17,13 +17,10 @@ func GetUsageBar(usage float64, width int) string {
 		return strings.Repeat("░", width)
 	}
 
-	filled := int((usage / 100.0) * float64(width))
-	if filled > width {
-		filled = width
-	}
+	filled := min(int((usage/100.0)*float64(width)), width)
 
 	var bar strings.Builder
-	for i := 0; i < width; i++ {
+	for i := range width {
 		if i < filled {
 			if usage > 80 {
 				bar.WriteString("█") // High usage - red

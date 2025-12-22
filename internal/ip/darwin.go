@@ -23,9 +23,9 @@ func parseDarwinIfconfig() []common.IPInfo {
 		return ips
 	}
 
-	interfaces := strings.Fields(strings.TrimSpace(string(output)))
+	interfaces := strings.FieldsSeq(strings.TrimSpace(string(output)))
 
-	for _, interfaceName := range interfaces {
+	for interfaceName := range interfaces {
 		cmd := exec.Command("ifconfig", interfaceName)
 		output, err := cmd.Output()
 		if err != nil {
@@ -119,7 +119,7 @@ func hexNetmaskToDotted(hexMask string) string {
 	}
 
 	var bytes [4]int64
-	for i := 0; i < 4; i++ {
+	for i := range 4 {
 		byteStr := hexStr[i*2 : (i+1)*2]
 		val, err := strconv.ParseInt(byteStr, 16, 64)
 		if err != nil {

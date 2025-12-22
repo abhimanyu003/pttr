@@ -1,5 +1,7 @@
 package common
 
+import "strings"
+
 import "github.com/charmbracelet/bubbles/list"
 
 // ViewMode represents the current view mode
@@ -233,20 +235,22 @@ func joinParts(parts []string) string {
 	if len(parts) == 0 {
 		return ""
 	}
-	result := parts[0]
+	var result strings.Builder
+	result.WriteString(parts[0])
 	for i := 1; i < len(parts); i++ {
-		result += " • " + parts[i]
+		result.WriteString(" • " + parts[i])
 	}
-	return result
+	return result.String()
 }
 
 func joinStrings(strs []string, sep string) string {
 	if len(strs) == 0 {
 		return ""
 	}
-	result := strs[0]
+	var result strings.Builder
+	result.WriteString(strs[0])
 	for i := 1; i < len(strs); i++ {
-		result += sep + strs[i]
+		result.WriteString(sep + strs[i])
 	}
-	return result
+	return result.String()
 }

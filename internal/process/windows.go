@@ -213,8 +213,8 @@ func getWindowsCPUUsageWMIC() (map[string]float64, error) {
 
 func parsePowerShellCPUOutput(output string) map[string]float64 {
 	cpuUsage := make(map[string]float64)
-	lines := strings.Split(output, "\n")
-	for _, line := range lines {
+	lines := strings.SplitSeq(output, "\n")
+	for line := range lines {
 		line = strings.TrimSpace(line)
 		if line == "" {
 			continue
