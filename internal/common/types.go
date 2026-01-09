@@ -1,8 +1,10 @@
 package common
 
-import "strings"
+import (
+	"strings"
 
-import "github.com/charmbracelet/bubbles/list"
+	"github.com/charmbracelet/bubbles/list"
+)
 
 // ViewMode represents the current view mode
 type ViewMode int
@@ -41,14 +43,15 @@ func (p PortInfo) Title() string {
 	var icon string
 	switch p.Proto {
 	case "TCP":
-		icon = "🔗"
+		icon = ""
 	case "UDP":
-		icon = "📡"
+		icon = ""
 	default:
-		icon = "🌐"
+		icon = ""
 	}
 
-	return icon + " Port " + p.Port + " (" + p.Proto + ")"
+	title := icon + " Port " + p.Port + " (" + p.Proto + ")"
+	return strings.TrimSpace(title)
 }
 
 func (p PortInfo) Description() string {
@@ -176,13 +179,15 @@ func (ip IPInfo) Title() string {
 	var icon string
 	switch ip.Type {
 	case "IPv4":
-		icon = "🌐"
+		icon = ""
 	case "IPv6":
-		icon = "🌍"
+		icon = ""
 	default:
-		icon = "📡"
+		icon = ""
 	}
-	return icon + " " + ip.IPAddress + " (" + ip.Type + ") - " + ip.Interface
+	title := icon + " " + ip.IPAddress + " (" + ip.Type + ") - " + ip.Interface
+
+	return strings.TrimSpace(title)
 }
 
 func (ip IPInfo) Description() string {
