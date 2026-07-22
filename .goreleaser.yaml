@@ -66,7 +66,7 @@ scoops:
       token: "{{ .Env.GITHUB_TOKEN }}"
     name: pttr
     homepage: "https://github.com/abhimanyu003/pttr"
-    description: "pttr is command line software that allows you to quickly run various transformation operations on the string."
+    description: "A cross-platform terminal UI application for viewing and managing open ports - process on your system."
     license: "MIT"
 
 nfpms:
